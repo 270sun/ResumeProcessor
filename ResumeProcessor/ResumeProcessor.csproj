@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.core.2.4.1\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.4.1\build\xunit.core.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26B35F04-E8C9-4495-8CD3-EEFA64952257}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ResumeProcessor</RootNamespace>
+    <AssemblyName>ResumeProcessor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Words.NET, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.2.1\lib\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.4.1\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Model\resume.cs" />
+    <Compile Include="Model\resumeBase.cs" />
+    <Compile Include="Model\resumeEducational.cs" />
+    <Compile Include="Model\resumeIntention.cs" />
+    <Compile Include="Model\resumeWorkBackground.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="UtilsTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="简历模板\51job简历-word\51job_于士斌%28263741105%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_任晓京%28228822700%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_刘君%28247603497%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_刘海涛%28272423234%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_刘立新%28223726930%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_刘英龙%28272643627%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_吴来全%2853781333%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_周彬%28283426634%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_孙星%28272499218%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_孙松涛%28222558349%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_孙筱玲%28265163176%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_展如意%28272636217%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_常敬禹%28283904603%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_张光明%28282597315%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_张微%28272444818%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_张爱国%28227950914%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_张福生%28271890437%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_张禹静%28272331124%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_张蒙%28272646045%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_彭世培%28284006324%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_方东亮13488827780%28275978169%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_李思学%28272695504%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_李浩%28266455673%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_李立民%28252539266%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_李红军%28272655662%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_李薇%28283241746%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_柴朝阳%2870997340%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_殷常保%28272316647%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_焦金普%28271603826%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_王庆利%28248074575%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_王振学%28223482608%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_王莹%286646221%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_石承志%28232780540%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_苏胜强%28281005880%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_葛德才%28260112393%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_董亚%28272267384%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_董晓翠%28272578436%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_董献云%28272359601%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_董银领%28289178278%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_薛军%2834552229%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_赵一峰%28272434276%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_赵志永%28272310320%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_赵美霞%2890332876%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_郝层层%28275007627%29.doc" />
+    <None Include="简历模板\51job简历-word\51job_闫卫锋%28247528437%29.doc" />
+    <None Include="简历模板\58同城简历-mht\姜继伟_58同城简历.mht" />
+    <None Include="简历模板\58同城简历-mht\杨开涛_58同城简历.mht" />
+    <None Include="简历模板\58同城简历-mht\段洋_58同城简历.mht" />
+    <None Include="简历模板\58同城简历-mht\王志华_58同城简历.mht" />
+    <None Include="简历模板\58同城简历-mht\黄鑫_58同城简历.mht" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_刘连营_快递员管住底薪5000_中文_20181220_1545269923777.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_吴春华_快递员管住底薪5000_中文_20181220_1545269923874.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_张大伟_快递员无责底薪5000管住_中文_20181220_1545269924209.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_张小明_快递员管住底薪5000_中文_20181220_1545269923906.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_张旭_快递员无责底薪5000管住_中文_20181220_1545269924365.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_李志华_货运司机_中文_20181220_1545269924240.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_李金成_快递员无责底薪5000管住_中文_20181220_1545269924138.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_李金成_快递员管住底薪5000_中文_20181220_1545269924176.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_杨子峥_快递员管住底薪5000_中文_20181220_1545269924004.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_杨子峥_高薪配送员_中文_20181220_1545269923970.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_毛彩鹏_高薪配送员_中文_20181220_1545269923843.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_王学军_快递员管住底薪5000_中文_20181220_1545269923811.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_王松_司机_中文_20181220_1545269924477.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_甄晨_货运司机_中文_20181220_1545269924070.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_盛凯_高薪配送员_中文_20181220_1545269924104.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_罗磊成_司机_中文_20181220_1545269924036.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_苗琳川_快递员管住底薪5000_中文_20181220_1545269924443.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_邱晨晨_快递员无责底薪5000管住_中文_20181220_1545269924302.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_邱晨晨_快递员管住底薪5000_中文_20181220_1545269924271.doc" />
+    <None Include="简历模板\智联招聘简历-word\智联招聘_阚胜民_司机_中文_20181220_1545269923937.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.1\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.1\build\xunit.core.props'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.1\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.1\build\xunit.core.targets'))" />
+  </Target>
+  <Import Project="..\packages\xunit.core.2.4.1\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.4.1\build\xunit.core.targets')" />
+</Project>
