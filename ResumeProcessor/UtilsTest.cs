@@ -9,7 +9,7 @@ namespace ResumeProcessor
         public void should_true()
         {
             string str = "hello world";
-            Assert.Equal("worl", Utils.GetString(str,"wo","d"));
+            Assert.Equal("worl", Utils.GetSubString(str,"wo","d"));
         }
         
     }
